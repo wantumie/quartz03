@@ -13,10 +13,12 @@
     <result column="remark" property="remark" />
     <result column="create_time" property="createTime" />
     <result column="modify_time" property="modifyTime" />
+    <result column="minnum" property="minnum" />
+    <result column="maxnum" property="maxnum" />
   </resultMap>
   <sql id="Base_Column_List">
     id, job_name, job_group, method_name, bean_class, status, cron_expression, params, 
-    remark, create_time, modify_time
+    remark, create_time, modify_time, minnum, maxnum
   </sql>
 
     <!-- 查询所有的定时任务 -->

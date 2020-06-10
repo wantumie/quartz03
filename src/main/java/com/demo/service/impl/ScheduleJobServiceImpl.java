@@ -64,9 +64,9 @@ public class ScheduleJobServiceImpl implements ScheduleJobService {
 
             //不存在，则创建
             if (null == trigger) {
-                Class clazz = QuartzJobFactory.class;
+//                Class clazz = QuartzJobFactory.class;
                 JobDetail jobDetail = JobBuilder.
-                        newJob(clazz).
+                        newJob(QuartzJobFactory.class).
                         withIdentity(job.getJobName(), job.getJobGroup()).
                         build();
                 jobDetail.getJobDataMap().put("scheduleJob", job);

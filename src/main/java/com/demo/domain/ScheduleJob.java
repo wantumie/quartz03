@@ -52,12 +52,17 @@ public class ScheduleJob {
      * 修改时间
      */
     private Date modifyTime;
+    
+    private int minnum;
+    
+    private int maxnum;
 
-    public ScheduleJob() {
+
+	public ScheduleJob() {
     }
 
     public ScheduleJob(Integer id, String jobName, String jobGroup, String methodName, String beanClass, Integer status,
-                       String cronExpression, String params, String remark, Date createTime, Date modifyTime) {
+                       String cronExpression, String params, String remark, Date createTime, Date modifyTime, int minnum, int maxnum) {
         this.id = id;
         this.jobName = jobName;
         this.jobGroup = jobGroup;
@@ -69,6 +74,8 @@ public class ScheduleJob {
         this.remark = remark;
         this.createTime = createTime;
         this.modifyTime = modifyTime;
+        this.minnum = minnum;
+        this.maxnum = maxnum;
     }
 
     public Integer getId() {
@@ -158,6 +165,23 @@ public class ScheduleJob {
     public void setModifyTime(Date modifyTime) {
         this.modifyTime = modifyTime;
     }
+    
+    public int getMinnum() {
+		return minnum;
+	}
+
+	public void setMinnum(int minnum) {
+		this.minnum = minnum;
+	}
+
+	public int getMaxnum() {
+		return maxnum;
+	}
+
+	public void setMaxnum(int maxnum) {
+		this.maxnum = maxnum;
+	}
+
 
     @Override
     public String toString() {
